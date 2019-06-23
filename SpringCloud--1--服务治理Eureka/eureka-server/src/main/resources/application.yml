@@ -1,0 +1,20 @@
+#server
+server:
+  port: 8888
+  
+#spring
+spring:
+  application:
+    name: eureka-server
+
+#eureka
+eureka:
+  instance:
+    hostname: localhost
+  client: #声明自己是个服务端
+    register-with-eureka: false #false表示不向注册中心注册自己
+    fetch-registry: false       #false表示自己就是注册中心，职责是维护服务清单，不参与检索
+    service-url:                #设置eureka server对外暴露的地址
+      default-zone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      
+      

@@ -1,0 +1,20 @@
+#server
+server:
+  port: 8886
+  
+#spring
+spring:
+  application:
+    name: eureka-client-product-service
+
+#eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8888/eureka/
+#eureka:
+#  instance:
+#    service-url:                
+#      default-zone: http://localhost:8888/eureka/
+
+      
